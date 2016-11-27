@@ -91,27 +91,27 @@ int aes_cbc_test()
 	//printf("* CBC mode:\n");
 	aes_key_setup(key[0], key_schedule, 256);
 
-	//printf(  "Key          : ");
-	//print_hex(key[0], 32);
-	//printf("\nIV           : ");
-	//print_hex(iv[0], 16);
+	printf(  "Key          : ");
+	print_hex(key[0], 32);
+	printf("\nIV           : ");
+	print_hex(iv[0], 16);
 
 	aes_encrypt_cbc(plaintext[0], 32, enc_buf, key_schedule, 256, iv[0]);
-	//printf("\nPlaintext    : ");
-	//print_hex(plaintext[0], 32);
-	//printf("\n-encrypted to: ");
-	//print_hex(enc_buf, 32);
-	//printf("\nCiphertext   : ");
-	//print_hex(ciphertext[0], 32);
+	printf("\nPlaintext    : ");
+	print_hex(plaintext[0], 32);
+	printf("\n-encrypted to: ");
+	print_hex(enc_buf, 32);
+	printf("\nCiphertext   : ");
+	print_hex(ciphertext[0], 32);
 	pass = pass && !memcmp(enc_buf, ciphertext[0], 32);
 
 	aes_decrypt_cbc(ciphertext[0], 32, enc_buf, key_schedule, 256, iv[0]);
-	//printf("\nCiphertext   : ");
-	//print_hex(ciphertext[0], 32);
-	//printf("\n-decrypted to: ");
-	//print_hex(enc_buf, 32);
-	//printf("\nPlaintext   : ");
-	//print_hex(plaintext[0], 32);
+	printf("\nCiphertext   : ");
+	print_hex(ciphertext[0], 32);
+	printf("\n-decrypted to: ");
+	print_hex(enc_buf, 32);
+	printf("\nPlaintext   : ");
+	print_hex(plaintext[0], 32);
 	pass = pass && !memcmp(enc_buf, plaintext[0], 32);
 
 	//printf("\n\n");
@@ -276,10 +276,10 @@ int aes_test()
 
 	return(pass);
 }
-
-int main(int argc, char *argv[])
-{
-	printf("AES Tests: %s\n", aes_test() ? "SUCCEEDED" : "FAILED");
-	getchar();
-	return(0);
-}
+//
+//int main(int argc, char *argv[])
+//{
+//	printf("AES Tests: %s\n", aes_cbc_test() ? "SUCCEEDED" : "FAILED");
+//	getchar();
+//	return(0);
+//}
