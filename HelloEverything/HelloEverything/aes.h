@@ -119,5 +119,5 @@ int aes_ecb_test();
 int aes_cbc_test();
 int aes_ctr_test();
 int aes_ccm_test();
-
+int aes_decrypt_cbc(const BYTE in[], size_t in_len, BYTE out[], const WORD key[], int keysize, const BYTE iv[]);	//AAA
 #endif   // AES_H

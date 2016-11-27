@@ -18,9 +18,18 @@
     <ClInclude Include="HelloWord.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="aes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HelloWord.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aes_test.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -40,7 +40,6 @@ void ccm_prepare_first_format_blk(BYTE buf[], int assoc_len, int payload_len, in
 void ccm_format_assoc_data(BYTE buf[], int *end_of_buf, const BYTE assoc[], int assoc_len);
 void ccm_format_payload_data(BYTE buf[], int *end_of_buf, const BYTE payload[], int payload_len);
 
-/**************************** VARIABLES *****************************/
 // This is the specified AES SBox. To look up a substitution value, put the first
 // nibble in the first index (row) and the second nibble in the second index (column).
 static const BYTE aes_sbox[16][16] = {

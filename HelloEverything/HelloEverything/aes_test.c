@@ -280,6 +280,6 @@ int aes_test()
 int main(int argc, char *argv[])
 {
 	printf("AES Tests: %s\n", aes_test() ? "SUCCEEDED" : "FAILED");
-
+	getchar();
 	return(0);
 }
